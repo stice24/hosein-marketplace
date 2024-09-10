@@ -1,0 +1,23 @@
+import React, { useState } from 'react';
+import './App.css';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Cart from './components/Cart';
+
+function App() {
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (product) => {
+    setCartItems([...cartItems, product]);
+  };
+
+  return (
+    <div className="App">
+      <Navbar cartItems={cartItems.length} />
+      <Home addToCart={addToCart} />
+      <Cart cartItems={cartItems} />
+    </div>
+  );
+}
+
+export default App;
