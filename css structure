@@ -1,0 +1,14 @@
+src/
+│
+├── components/
+│   ├── Navbar.js
+│   ├── ProductCard.js
+│   ├── ProductModal.js
+│   └── Cart.js
+│
+├── pages/
+│   └── Home.js
+│
+├── App.js
+├── App.css
+└── index.js
