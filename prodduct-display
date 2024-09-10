@@ -1,0 +1,20 @@
+import React, { useState } from 'react';
+import './ProductCard.css';
+import ProductModal from './ProductModal';
+
+function ProductCard({ product, addToCart }) {
+  const [showModal, setShowModal] = useState(false);
+
+  return (
+    <div className="product-card">
+      <img src={product.image} alt={product.name} onClick={() => setShowModal(true)} />
+      <h2>{product.name}</h2>
+      <p>${product.price}</p>
+      <button onClick={() => addToCart(product)}>Add to Cart</button>
+
+      {showModal && <ProductModal product={product} onClose={() => setShowModal(false)} />}
+    </div>
+  );
+}
+
+export default ProductCard;
