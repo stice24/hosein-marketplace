@@ -1,0 +1,18 @@
+import React from 'react';
+import './ProductModal.css';
+
+function ProductModal({ product, onClose }) {
+  return (
+    <div className="modal">
+      <div className="modal-content">
+        <span className="close" onClick={onClose}>&times;</span>
+        <img src={product.image} alt={product.name} />
+        <h2>{product.name}</h2>
+        <p>${product.price}</p>
+        <p>More details about the product...</p>
+      </div>
+    </div>
+  );
+}
+
+export default ProductModal;
